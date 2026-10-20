@@ -1,7 +1,7 @@
 # Installation
 
 Requires an unlocked bootloader. Download the image from the
-[releases page](https://github.com/ALXP-DANIEL/android_device_xiaomi_piano/releases/latest)
+[releases page](https://github.com/xiaomi-pad-8-pro-development/android_device_xiaomi_piano-twrp/releases/latest)
 and check its SHA-256 against the value listed there.
 
 ```bash

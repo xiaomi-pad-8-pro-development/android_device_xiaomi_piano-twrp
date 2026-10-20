@@ -1,13 +1,17 @@
-# TWRP for Xiaomi Pad 8 Pro (piano)
+# TWRP device tree for the Xiaomi Pad 8 Pro (piano)
 
 TWRP 16 recovery device tree.
 
 ## Build
 
-- **GitHub:** run **TWRP Builder (piano)** from the Actions tab of the
-  [main branch](../../tree/main).
-- **Locally:** sync a TWRP 16 source, then `bash sync-device.sh` from
-  `main` and pick Recovery, then TWRP.
+Clone into a TWRP 16 source and build the recovery image:
+
+```
+git clone https://github.com/xiaomi-pad-8-pro-development/android_device_xiaomi_piano-twrp -b seventeen device/xiaomi/piano
+source build/envsetup.sh
+lunch twrp_piano-bp2a-eng
+mka recoveryimage
+```
 
 The recovery is refused by the bootloader if its ramdisk is too big, so
 the build checks the size and fails instead of making a broken image.
