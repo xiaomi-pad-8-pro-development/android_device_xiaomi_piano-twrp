@@ -19,7 +19,7 @@
 # could be silently skipped instead of failing the build. That risk is
 # answered by a mandatory ELF closure audit of the produced ramdisk before any
 # image is flashed - every binary and shared library is resolved and any
-# unresolved DT_NEEDED fails the gate. See docs/twrp16-first-image-elf-audit.md.
+# unresolved DT_NEEDED fails the gate. See tools/piano16-elf-closure-audit.py.
 #
 # This flag does not affect this device tree's own dependencies, which resolve
 # completely. BUILD_BROKEN_* is still NOT set.
@@ -76,8 +76,7 @@ BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE)
 # packaged. No prebuilt kernel is carried, unlike the reference trees.
 TARGET_NO_KERNEL_OVERRIDE := true
 
-# RECOVERY RAMDISK SIZE BUDGET — hard constraint, see
-# docs/twrp14-frozen-reference.md.
+# RECOVERY RAMDISK SIZE BUDGET — hard constraint.
 #
 # The piano bootloader refuses to load a recovery whose compressed ramdisk
 # exceeds a measured bound bracketed to 29,210,310 bytes (boots) and

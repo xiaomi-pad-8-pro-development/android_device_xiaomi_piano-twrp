@@ -68,7 +68,7 @@ PRUNE=()
 # removed to make crypto fit. Then the premise collapsed: the size ceiling the
 # pruning existed to satisfy turned out not to apply to TWRP16 at all. A
 # 31,265,294-byte image - 2,054,984 above the bound measured on TWRP14 - boots
-# fully into TWRP with crypto enabled. See docs/twrp16-test-matrix.md.
+# fully into TWRP with crypto enabled. See docs/TWRP16_FUNCTIONAL_TEST_MATRIX.md.
 #
 # So nothing is pruned. Removing working code to solve a constraint that does
 # not bind would be pure risk. The list below stays only so the analysis is not

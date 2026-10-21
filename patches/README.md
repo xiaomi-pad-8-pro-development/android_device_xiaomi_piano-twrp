@@ -143,8 +143,7 @@ corrupts Soong's JSON variables file.
 
 Result: `KEY_REQUIRES_UPGRADE` no longer occurs, and no key blob is rewritten —
 which also satisfies the rule that key material must not be modified. Decryption
-still fails afterwards with `INCOMPATIBLE_BLOCK_MODE`; see
-docs/twrp16-migration-progress.md.
+still fails afterwards with `INCOMPATIBLE_BLOCK_MODE`.
 
 ## Read-only fallback to the stock `key_back` blob
 
